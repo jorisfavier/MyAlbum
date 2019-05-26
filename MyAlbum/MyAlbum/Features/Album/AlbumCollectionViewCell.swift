@@ -20,7 +20,10 @@ class AlbumCollectionViewCell: UICollectionViewCell {
             let url = URL(string: urlString) {
             let processor = CroppingImageProcessor(size: self.frame.size,
                                                    anchor: CGPoint(x: 0.5, y: 0.5))
-            thumbnailImageView.kf.setImage(with: url, options: [.processor(processor)])
+            thumbnailImageView.kf.setImage(with: url,
+                                           options: [.processor(processor),
+                                                     .transition(.fade(1))
+                                            ])
         }
         
     }

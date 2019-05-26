@@ -17,6 +17,9 @@ class AlbumServiceImpl: AlbumService {
     func getAlbums() -> Observable<[AlbumDTO]> {
         let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
         return session.rx.json(url: url)
+            .catchError { error in
+                return Observable.error(ServiceError.serverError)
+            }
             .flatMap { json -> Observable<[AlbumDTO]> in
             guard
                 let json = json as? [[String: Any]]
@@ -33,6 +36,9 @@ class AlbumServiceImpl: AlbumService {
         }
         let url = URL(string: "https://jsonplaceholder.typicode.com/albums/\(idAlbum)/photos\(urlQueryParameter)")!
         return session.rx.json(url: url)
+            .catchError { error in
+                return Observable.error(ServiceError.serverError)
+            }
             .flatMap { json -> Observable<[PhotoDTO]> in
                 guard
                     let json = json as? [[String: Any]]

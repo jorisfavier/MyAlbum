@@ -16,12 +16,16 @@ class AlbumViewModel {
     
     private var _albumsList: BehaviorRelay<[Album]> = BehaviorRelay.init(value: [])
     private var _reload = PublishSubject<Void>()
+    private var _error = PublishSubject<String>()
     
     var albums: Observable<[Album]> {
         return _albumsList.asObservable()
     }
     var reload: AnyObserver<Void> {
         return _reload.asObserver()
+    }
+    var error: Observable<String> {
+        return _error.asObservable()
     }
     
     init(albumService: AlbumService) {
@@ -34,6 +38,10 @@ class AlbumViewModel {
     private func loadAlbums(){
         //retrieve the albums, then convert it to Album objects
         albumService.getAlbums()
+            .catchError { error in
+                self._error.onNext("Oups !! An error occured, please try again later")
+                return Observable.empty()
+            }
             .map { albumsDTO in albumsDTO.map(Album.init) }
             .flatMap { albums -> Observable<Album> in
                 Observable.from(albums)
