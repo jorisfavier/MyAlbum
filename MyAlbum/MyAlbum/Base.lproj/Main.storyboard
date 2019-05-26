@@ -17,9 +17,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHU-xQ-alB">
+                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FTI-B0-M15">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCollectionViewCell" id="RfP-jx-sEu" customClass="AlbumCollectionViewCell" customModule="MyAlbum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-WZ-i8p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cc4-ej-diF">
+                                                    <rect key="frame" x="0.0" y="120" width="150" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-gT-aF2">
+                                                            <rect key="frame" x="5" y="0.0" width="140" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="Vh1-Ea-00v"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="0a1-VH-ora"/>
+                                                        <constraint firstItem="nw0-gT-aF2" firstAttribute="centerX" secondItem="Cc4-ej-diF" secondAttribute="centerX" id="Pfm-Jb-16d"/>
+                                                        <constraint firstAttribute="trailing" secondItem="nw0-gT-aF2" secondAttribute="trailing" constant="5" id="dvd-DQ-0Tu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nw0-gT-aF2" secondAttribute="bottom" id="ti4-gv-coP"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Cc4-ej-diF" secondAttribute="bottom" id="9jO-dE-LEZ"/>
+                                            <constraint firstItem="Cc4-ej-diF" firstAttribute="leading" secondItem="RfP-jx-sEu" secondAttribute="leading" id="BWB-F3-WFs"/>
+                                            <constraint firstItem="6a5-WZ-i8p" firstAttribute="top" secondItem="RfP-jx-sEu" secondAttribute="top" id="Eh5-xF-cel"/>
+                                            <constraint firstItem="6a5-WZ-i8p" firstAttribute="leading" secondItem="RfP-jx-sEu" secondAttribute="leading" id="biR-Hl-1Il"/>
+                                            <constraint firstAttribute="bottom" secondItem="6a5-WZ-i8p" secondAttribute="bottom" id="c8t-iD-gyP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cc4-ej-diF" secondAttribute="trailing" id="haJ-tS-2pI"/>
+                                            <constraint firstAttribute="trailing" secondItem="6a5-WZ-i8p" secondAttribute="trailing" id="njX-c6-5tA"/>
+                                        </constraints>
+                                        <size key="customSize" width="150" height="150"/>
+                                        <connections>
+                                            <outlet property="thumbnailImageView" destination="6a5-WZ-i8p" id="lGS-eg-X7g"/>
+                                            <outlet property="title" destination="nw0-gT-aF2" id="La4-6w-NGO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZHU-xQ-alB" secondAttribute="bottom" constant="10" id="Dhs-xn-LFM"/>
+                            <constraint firstItem="ZHU-xQ-alB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="EE5-I3-9gf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZHU-xQ-alB" secondAttribute="trailing" constant="10" id="ZkR-tF-FRR"/>
+                            <constraint firstItem="ZHU-xQ-alB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="mdR-cN-NGt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="albumCollectionView" destination="ZHU-xQ-alB" id="cSR-Zn-o3R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

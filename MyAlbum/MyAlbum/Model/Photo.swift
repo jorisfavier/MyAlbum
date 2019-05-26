@@ -9,7 +9,6 @@
 import Foundation
 
 class Photo {
-    let albumId: Int
     let id: Int
     let title: String
     let url: String
@@ -20,10 +19,16 @@ class Photo {
          title: String,
          url: String,
          thumbnailUrl: String){
-        self.albumId = albumId
         self.id = id
         self.title = title
         self.url = url
         self.thumbnailUrl = thumbnailUrl
+    }
+    
+    init(photoDTO: PhotoDTO) {
+        self.id = photoDTO.id
+        self.title = photoDTO.title
+        self.thumbnailUrl = photoDTO.thumbnailUrl
+        self.url = photoDTO.url
     }
 }

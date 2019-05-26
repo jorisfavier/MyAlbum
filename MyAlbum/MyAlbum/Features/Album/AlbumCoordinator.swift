@@ -22,7 +22,7 @@ class AlbumCoordinator: BaseCoordinator {
     override func start() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "AlbumViewController") as! AlbumViewController
-        vc.albumSvc = dependencyContainer.albumService
+        vc.viewModel = AlbumViewModel(albumService: dependencyContainer.albumService)
         navControler.pushViewController(vc, animated: true)
     }
 }
