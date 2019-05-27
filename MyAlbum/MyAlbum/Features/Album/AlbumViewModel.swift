@@ -66,6 +66,10 @@ class AlbumViewModel {
     private func loadAlbumThumbnail(for album: Album) -> Observable<Album> {
         
         return albumService.getPhotos(idAlbum: album.id, idPhoto: 1)
+            .catchError { error in
+                self._error.onNext("Oups !! An error occured, please try again later")
+                return Observable.empty()
+            }
             .map { photos -> Album in
                 album.photos = photos.map(Photo.init)
                 return album

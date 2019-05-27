@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		60A052B330CEEDF82D9642DA /* Pods_MyAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C6CCD634C589AB8F822B4 /* Pods_MyAlbum.framework */; };
-		81A7812E7CEA331C27BC3343 /* Pods_MyAlbumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C763E2EA0E89E4B0A5E0BB52 /* Pods_MyAlbumUITests.framework */; };
 		A980B04322998405006C862A /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B04222998405006C862A /* AlbumService.swift */; };
 		A980B047229984AE006C862A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B046229984AE006C862A /* Coordinator.swift */; };
 		A980B04A229984BF006C862A /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B048229984BF006C862A /* AlbumDTO.swift */; };
@@ -23,25 +22,18 @@
 		A980B05D2299C116006C862A /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B05C2299C116006C862A /* DependencyContainer.swift */; };
 		A980B05F229A8C19006C862A /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B05E229A8C19006C862A /* AlbumViewModel.swift */; };
 		A980B061229A921E006C862A /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B060229A921E006C862A /* AlbumCollectionViewCell.swift */; };
+		A980B063229B564E006C862A /* MockAlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B062229B564E006C862A /* MockAlbumService.swift */; };
 		A9C52B8622984B1900375EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C52B8522984B1900375EB0 /* AppDelegate.swift */; };
 		A9C52B8822984B1900375EB0 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C52B8722984B1900375EB0 /* AlbumViewController.swift */; };
 		A9C52B8B22984B1900375EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C52B8922984B1900375EB0 /* Main.storyboard */; };
 		A9C52B8D22984B1B00375EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C52B8C22984B1B00375EB0 /* Assets.xcassets */; };
 		A9C52B9022984B1B00375EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C52B8E22984B1B00375EB0 /* LaunchScreen.storyboard */; };
-		A9C52B9B22984B1B00375EB0 /* MyAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C52B9A22984B1B00375EB0 /* MyAlbumTests.swift */; };
-		A9C52BA622984B1B00375EB0 /* MyAlbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C52BA522984B1B00375EB0 /* MyAlbumUITests.swift */; };
+		A9C52B9B22984B1B00375EB0 /* AlbumViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C52B9A22984B1B00375EB0 /* AlbumViewModelTest.swift */; };
 		D7627A9E023945C7DB2F08C5 /* Pods_MyAlbumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A402A4E272FD0E69CC82986B /* Pods_MyAlbumTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A9C52B9722984B1B00375EB0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9C52B7A22984B1900375EB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9C52B8122984B1900375EB0;
-			remoteInfo = MyAlbum;
-		};
-		A9C52BA222984B1B00375EB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9C52B7A22984B1900375EB0 /* Project object */;
 			proxyType = 1;
@@ -71,6 +63,7 @@
 		A980B05C2299C116006C862A /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		A980B05E229A8C19006C862A /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		A980B060229A921E006C862A /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		A980B062229B564E006C862A /* MockAlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlbumService.swift; sourceTree = "<group>"; };
 		A9C52B8222984B1900375EB0 /* MyAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C52B8522984B1900375EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9C52B8722984B1900375EB0 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -79,11 +72,8 @@
 		A9C52B8F22984B1B00375EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9C52B9122984B1B00375EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9C52B9622984B1B00375EB0 /* MyAlbumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAlbumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9C52B9A22984B1B00375EB0 /* MyAlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumTests.swift; sourceTree = "<group>"; };
+		A9C52B9A22984B1B00375EB0 /* AlbumViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModelTest.swift; sourceTree = "<group>"; };
 		A9C52B9C22984B1B00375EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9C52BA122984B1B00375EB0 /* MyAlbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAlbumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9C52BA522984B1B00375EB0 /* MyAlbumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumUITests.swift; sourceTree = "<group>"; };
-		A9C52BA722984B1B00375EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B540AFC1EDB21A4234C77403 /* Pods-MyAlbumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAlbumUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyAlbumUITests/Pods-MyAlbumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C763E2EA0E89E4B0A5E0BB52 /* Pods_MyAlbumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAlbumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCFD516B8D9D04B325FFA61 /* Pods-MyAlbumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAlbumTests.release.xcconfig"; path = "Target Support Files/Pods-MyAlbumTests/Pods-MyAlbumTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,14 +93,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7627A9E023945C7DB2F08C5 /* Pods_MyAlbumTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9C52B9E22984B1B00375EB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				81A7812E7CEA331C27BC3343 /* Pods_MyAlbumUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,12 +188,19 @@
 			path = Impl;
 			sourceTree = "<group>";
 		};
+		A980B064229B57B0006C862A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A980B062229B564E006C862A /* MockAlbumService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		A9C52B7922984B1900375EB0 = {
 			isa = PBXGroup;
 			children = (
 				A9C52B8422984B1900375EB0 /* MyAlbum */,
 				A9C52B9922984B1B00375EB0 /* MyAlbumTests */,
-				A9C52BA422984B1B00375EB0 /* MyAlbumUITests */,
 				A9C52B8322984B1900375EB0 /* Products */,
 				94E5C2C9CD345A273C07B61E /* Pods */,
 				AE5CFF3021147E4315F56D79 /* Frameworks */,
@@ -223,7 +212,6 @@
 			children = (
 				A9C52B8222984B1900375EB0 /* MyAlbum.app */,
 				A9C52B9622984B1B00375EB0 /* MyAlbumTests.xctest */,
-				A9C52BA122984B1B00375EB0 /* MyAlbumUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,19 +234,11 @@
 		A9C52B9922984B1B00375EB0 /* MyAlbumTests */ = {
 			isa = PBXGroup;
 			children = (
-				A9C52B9A22984B1B00375EB0 /* MyAlbumTests.swift */,
+				A980B064229B57B0006C862A /* Mock */,
+				A9C52B9A22984B1B00375EB0 /* AlbumViewModelTest.swift */,
 				A9C52B9C22984B1B00375EB0 /* Info.plist */,
 			);
 			path = MyAlbumTests;
-			sourceTree = "<group>";
-		};
-		A9C52BA422984B1B00375EB0 /* MyAlbumUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A9C52BA522984B1B00375EB0 /* MyAlbumUITests.swift */,
-				A9C52BA722984B1B00375EB0 /* Info.plist */,
-			);
-			path = MyAlbumUITests;
 			sourceTree = "<group>";
 		};
 		AE5CFF3021147E4315F56D79 /* Frameworks */ = {
@@ -301,6 +281,7 @@
 				A9C52B9222984B1B00375EB0 /* Sources */,
 				A9C52B9322984B1B00375EB0 /* Frameworks */,
 				A9C52B9422984B1B00375EB0 /* Resources */,
+				2EB0AE5EAD9FFF4303BFB505 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,25 +292,6 @@
 			productName = MyAlbumTests;
 			productReference = A9C52B9622984B1B00375EB0 /* MyAlbumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A9C52BA022984B1B00375EB0 /* MyAlbumUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9C52BB022984B1B00375EB0 /* Build configuration list for PBXNativeTarget "MyAlbumUITests" */;
-			buildPhases = (
-				9A5B661A0A52239A3AFE49F5 /* [CP] Check Pods Manifest.lock */,
-				A9C52B9D22984B1B00375EB0 /* Sources */,
-				A9C52B9E22984B1B00375EB0 /* Frameworks */,
-				A9C52B9F22984B1B00375EB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9C52BA322984B1B00375EB0 /* PBXTargetDependency */,
-			);
-			name = MyAlbumUITests;
-			productName = MyAlbumUITests;
-			productReference = A9C52BA122984B1B00375EB0 /* MyAlbumUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -345,10 +307,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					A9C52B9522984B1B00375EB0 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = A9C52B8122984B1900375EB0;
-					};
-					A9C52BA022984B1B00375EB0 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = A9C52B8122984B1900375EB0;
 					};
@@ -369,7 +327,6 @@
 			targets = (
 				A9C52B8122984B1900375EB0 /* MyAlbum */,
 				A9C52B9522984B1B00375EB0 /* MyAlbumTests */,
-				A9C52BA022984B1B00375EB0 /* MyAlbumUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -386,13 +343,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A9C52B9422984B1B00375EB0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9C52B9F22984B1B00375EB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,6 +374,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2EB0AE5EAD9FFF4303BFB505 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyAlbumTests/Pods-MyAlbumTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyAlbumTests/Pods-MyAlbumTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyAlbumTests/Pods-MyAlbumTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46A4B3CE794DD61C285CA329 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,28 +407,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MyAlbum-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A5B661A0A52239A3AFE49F5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyAlbumUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,15 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9C52B9B22984B1B00375EB0 /* MyAlbumTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9C52B9D22984B1B00375EB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9C52BA622984B1B00375EB0 /* MyAlbumUITests.swift in Sources */,
+				A9C52B9B22984B1B00375EB0 /* AlbumViewModelTest.swift in Sources */,
+				A980B063229B564E006C862A /* MockAlbumService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,11 +472,6 @@
 			isa = PBXTargetDependency;
 			target = A9C52B8122984B1900375EB0 /* MyAlbum */;
 			targetProxy = A9C52B9722984B1B00375EB0 /* PBXContainerItemProxy */;
-		};
-		A9C52BA322984B1B00375EB0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9C52B8122984B1900375EB0 /* MyAlbum */;
-			targetProxy = A9C52BA222984B1B00375EB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -756,46 +689,6 @@
 			};
 			name = Release;
 		};
-		A9C52BB122984B1B00375EB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B540AFC1EDB21A4234C77403 /* Pods-MyAlbumUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyAlbumUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.jorisfavier.MyAlbumUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyAlbum;
-			};
-			name = Debug;
-		};
-		A9C52BB222984B1B00375EB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AD21C21F29FFEC30A1CF3AA /* Pods-MyAlbumUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyAlbumUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.jorisfavier.MyAlbumUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyAlbum;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -822,15 +715,6 @@
 			buildConfigurations = (
 				A9C52BAE22984B1B00375EB0 /* Debug */,
 				A9C52BAF22984B1B00375EB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9C52BB022984B1B00375EB0 /* Build configuration list for PBXNativeTarget "MyAlbumUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9C52BB122984B1B00375EB0 /* Debug */,
-				A9C52BB222984B1B00375EB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

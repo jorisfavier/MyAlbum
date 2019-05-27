@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Album {
+class Album: Equatable {
+    
     let id: Int
     let title: String
     var thumbnailUrl: String? {
@@ -24,6 +25,12 @@ class Album {
     init(album: AlbumDTO){
         self.id = album.id
         self.title = album.title
+    }
+    
+    static func == (lhs: Album, rhs: Album) -> Bool {
+        return lhs.id == rhs.id
+            && lhs.title == rhs.title
+            && lhs.thumbnailUrl == rhs.thumbnailUrl
     }
     
     

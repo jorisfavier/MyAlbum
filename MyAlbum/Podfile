@@ -13,11 +13,8 @@ target 'MyAlbum' do
   target 'MyAlbumTests' do
     inherit! :search_paths
     # Pods for testing
-  end
-
-  target 'MyAlbumUITests' do
-    inherit! :search_paths
-    # Pods for testing
+    pod 'Nimble'
+    pod 'RxBlocking'
   end
 
 end
