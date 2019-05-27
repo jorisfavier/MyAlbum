@@ -25,8 +25,7 @@ class PhotoDetailViewController: UIViewController {
         let processor = CroppingImageProcessor(size: fullScreenImage.frame.size,
                                                anchor: CGPoint(x: 0.5, y: 0.5))
         fullScreenImage.kf.setImage(with: url,
-                               options: [.processor(processor),
-                                         .transition(.fade(1))])
+                               options: [.processor(processor)])
         closeButton.rx.controlEvent(.touchUpInside)
             .bind(to: viewModel.callDismiss)
         .disposed(by: disposeBag)

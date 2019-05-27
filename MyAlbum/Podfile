@@ -9,6 +9,7 @@ target 'MyAlbum' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'Kingfisher', '~> 5.0'
+  pod 'Hero'
 
   target 'MyAlbumTests' do
     inherit! :search_paths

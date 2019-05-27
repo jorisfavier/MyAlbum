@@ -143,6 +143,9 @@
                                             <constraint firstItem="73E-up-ScZ" firstAttribute="leading" secondItem="RpN-K4-NYc" secondAttribute="leading" id="mdN-oq-rJu"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="150"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="photoImage" destination="73E-up-ScZ" id="3mf-Z2-N63"/>
                                         </connections>
@@ -167,6 +170,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RpV-yS-EFG"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="zoom"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="noDataAvailableLabel" destination="6Ba-Tb-kws" id="fI3-cB-s9q"/>
                         <outlet property="photoCollectionView" destination="7kE-oa-tQX" id="z1D-fS-FkC"/>
@@ -179,7 +186,6 @@
         <!--Photo Detail View Controller-->
         <scene sceneID="sT3-v7-fsf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ju7-BG-MOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PhotoDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qBf-wx-jC8" customClass="PhotoDetailViewController" customModule="MyAlbum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfS-kK-8Nd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -187,6 +193,9 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UWG-Fw-dj2">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dff-V7-OfK">
                                 <rect key="frame" x="10" y="54" width="19" height="22"/>
@@ -206,11 +215,16 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="zoom"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="closeButton" destination="Dff-V7-OfK" id="HFT-2V-3Jy"/>
                         <outlet property="fullScreenImage" destination="UWG-Fw-dj2" id="N8N-Gf-1V3"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ju7-BG-MOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2391" y="184"/>
         </scene>
