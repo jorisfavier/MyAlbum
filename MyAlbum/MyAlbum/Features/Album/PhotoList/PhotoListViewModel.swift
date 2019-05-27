@@ -17,6 +17,7 @@ class PhotoListViewModel {
     private var _reload = PublishSubject<Void>()
     private var _error = PublishSubject<String>()
     private var _photoList = BehaviorSubject<[Photo]>(value : [])
+    private var _selectedPhoto = PublishSubject<Photo>()
     
     var photoList: Observable<[Photo]> {
         return _photoList.asObservable()
@@ -31,6 +32,14 @@ class PhotoListViewModel {
     
     var title: Observable<String> {
         return Observable.just(album.title)
+    }
+    
+    var showPhotoDetail: Observable<Photo> {
+        return _selectedPhoto.asObservable()
+    }
+    
+    var selectPhoto: AnyObserver<Photo> {
+        return _selectedPhoto.asObserver()
     }
     
     init(albumService: AlbumService, album: Album) {

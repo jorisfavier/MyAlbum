@@ -35,7 +35,26 @@ class AlbumCoordinator: BaseCoordinator {
     private func showPhotoList(album: Album){
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "PhotoListViewController") as! PhotoListViewController
-        vc.viewModel = PhotoListViewModel(albumService: dependencyContainer.albumService, album: album)
+        let vm = PhotoListViewModel(albumService: dependencyContainer.albumService, album: album)
+        vc.viewModel = vm
+        vm.showPhotoDetail
+            .subscribe(onNext: { [weak self] photo in
+                self?.showPhotoDetail(photo: photo)
+            })
+            .disposed(by: disposeBag)
         navControler.pushViewController(vc, animated: true)
+    }
+    
+    private func showPhotoDetail(photo: Photo){
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PhotoDetailViewController") as! PhotoDetailViewController
+        let vm = PhotoDetailViewModel(photo: photo)
+        vc.viewModel = vm
+        vm.dismiss
+            .subscribe(onNext: { [weak self] _ in
+                self?.navControler.dismiss(animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
+        navControler.present(vc, animated: true, completion: nil)
     }
 }
