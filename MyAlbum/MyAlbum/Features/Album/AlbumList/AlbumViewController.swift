@@ -20,8 +20,6 @@ class AlbumViewController: UIViewController {
     
     var viewModel: AlbumViewModel!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -62,12 +60,10 @@ class AlbumViewController: UIViewController {
                 strongSelf.presentAlert(message: errorMessage)
             })
             .disposed(by: disposeBag)
-    }
-    
-    private func presentAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true)
+        
+        albumCollectionView.rx.modelSelected(Album.self)
+            .bind(to: viewModel.selectAlbum)
+            .disposed(by: disposeBag)
     }
 
 }

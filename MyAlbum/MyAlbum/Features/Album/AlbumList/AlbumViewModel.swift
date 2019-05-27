@@ -17,6 +17,7 @@ class AlbumViewModel {
     private var _albumsList: BehaviorRelay<[Album]> = BehaviorRelay.init(value: [])
     private var _reload = PublishSubject<Void>()
     private var _error = PublishSubject<String>()
+    private var _selectedAlbum = PublishSubject<Album>()
     
     var albums: Observable<[Album]> {
         return _albumsList.asObservable()
@@ -26,6 +27,14 @@ class AlbumViewModel {
     }
     var error: Observable<String> {
         return _error.asObservable()
+    }
+    
+    var showAlbumDetail: Observable<Album> {
+        return _selectedAlbum.asObservable()
+    }
+    
+    var selectAlbum: AnyObserver<Album> {
+        return _selectedAlbum.asObserver()
     }
     
     init(albumService: AlbumService) {

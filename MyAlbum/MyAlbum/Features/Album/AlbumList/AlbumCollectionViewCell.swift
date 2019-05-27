@@ -11,6 +11,7 @@ import UIKit
 import Kingfisher
 
 class AlbumCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var title: UILabel!
     
@@ -22,9 +23,8 @@ class AlbumCollectionViewCell: UICollectionViewCell {
                                                    anchor: CGPoint(x: 0.5, y: 0.5))
             thumbnailImageView.kf.setImage(with: url,
                                            options: [.processor(processor),
-                                                     .transition(.fade(1))
-                                            ])
+                                                     .transition(.fade(1))])
         }
-        
     }
 }
+

@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import RxSwift
 
 class BaseCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
+    
+    let disposeBag = DisposeBag()
     
     func start() {
         fatalError("Start method should be implemented.")
