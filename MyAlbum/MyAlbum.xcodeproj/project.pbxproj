@@ -27,6 +27,8 @@
 		A980B06E229C76F1006C862A /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B06D229C76F1006C862A /* PhotoListViewModel.swift */; };
 		A980B070229C7EA2006C862A /* UIViewControler+MyAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B06F229C7EA2006C862A /* UIViewControler+MyAlbum.swift */; };
 		A980B073229C8883006C862A /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B072229C8883006C862A /* AlbumCollectionViewCell.swift */; };
+		A980B076229C9208006C862A /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B075229C9208006C862A /* PhotoDetailViewController.swift */; };
+		A980B078229C9215006C862A /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A980B077229C9215006C862A /* PhotoDetailViewModel.swift */; };
 		A9C52B8622984B1900375EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C52B8522984B1900375EB0 /* AppDelegate.swift */; };
 		A9C52B8822984B1900375EB0 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C52B8722984B1900375EB0 /* AlbumViewController.swift */; };
 		A9C52B8B22984B1900375EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C52B8922984B1900375EB0 /* Main.storyboard */; };
@@ -72,6 +74,8 @@
 		A980B06D229C76F1006C862A /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		A980B06F229C7EA2006C862A /* UIViewControler+MyAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControler+MyAlbum.swift"; sourceTree = "<group>"; };
 		A980B072229C8883006C862A /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		A980B075229C9208006C862A /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		A980B077229C9215006C862A /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
 		A9C52B8222984B1900375EB0 /* MyAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C52B8522984B1900375EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9C52B8722984B1900375EB0 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -217,11 +221,21 @@
 		A980B071229C828B006C862A /* Album */ = {
 			isa = PBXGroup;
 			children = (
+				A980B074229C8DB6006C862A /* PhotoDetail */,
 				A980B05A2299BFB0006C862A /* AlbumCoordinator.swift */,
 				A980B05422998583006C862A /* AlbumList */,
 				A980B065229C72E5006C862A /* PhotoList */,
 			);
 			path = Album;
+			sourceTree = "<group>";
+		};
+		A980B074229C8DB6006C862A /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A980B075229C9208006C862A /* PhotoDetailViewController.swift */,
+				A980B077229C9215006C862A /* PhotoDetailViewModel.swift */,
+			);
+			path = PhotoDetail;
 			sourceTree = "<group>";
 		};
 		A9C52B7922984B1900375EB0 = {
@@ -468,6 +482,7 @@
 				A980B061229A921E006C862A /* PhotoCollectionViewCell.swift in Sources */,
 				A980B05D2299C116006C862A /* DependencyContainer.swift in Sources */,
 				A980B05B2299BFB0006C862A /* AlbumCoordinator.swift in Sources */,
+				A980B076229C9208006C862A /* PhotoDetailViewController.swift in Sources */,
 				A980B04B229984BF006C862A /* PhotoDTO.swift in Sources */,
 				A980B073229C8883006C862A /* AlbumCollectionViewCell.swift in Sources */,
 				A980B05F229A8C19006C862A /* AlbumViewModel.swift in Sources */,
@@ -482,6 +497,7 @@
 				A9C52B8622984B1900375EB0 /* AppDelegate.swift in Sources */,
 				A980B04322998405006C862A /* AlbumService.swift in Sources */,
 				A980B06E229C76F1006C862A /* PhotoListViewModel.swift in Sources */,
+				A980B078229C9215006C862A /* PhotoDetailViewModel.swift in Sources */,
 				A980B04D22998525006C862A /* AppCoordinator.swift in Sources */,
 				A980B05122998540006C862A /* Album.swift in Sources */,
 				A980B070229C7EA2006C862A /* UIViewControler+MyAlbum.swift in Sources */,

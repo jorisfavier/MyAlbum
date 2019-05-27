@@ -14,6 +14,7 @@ class PhotoListViewController: UIViewController {
     var viewModel: PhotoListViewModel!
     
     @IBOutlet weak var photoCollectionView: UICollectionView!
+    @IBOutlet weak var noDataAvailableLabel: UILabel!
     
     private let refreshControl = UIRefreshControl()
     private let disposeBag = DisposeBag()
@@ -34,9 +35,9 @@ class PhotoListViewController: UIViewController {
     private func initData(){
         viewModel.photoList
             .observeOn(MainScheduler.instance)
-            .do(onNext: { [weak self] albums in
+            .do(onNext: { [weak self] photos in
                 self?.refreshControl.endRefreshing()
-//                self?.noDataLabel.isHidden = albums.count > 0
+                self?.noDataAvailableLabel.isHidden = photos.count > 0
             })
             .bind(to: photoCollectionView.rx.items(cellIdentifier: "PhotoCollectionViewCell",
                                                    cellType: PhotoCollectionViewCell.self)) { (_, photo, cell) in
@@ -62,6 +63,11 @@ class PhotoListViewController: UIViewController {
                 strongSelf.presentAlert(message: errorMessage)
             })
             .disposed(by: disposeBag)
+        
+        photoCollectionView.rx.modelSelected(Photo.self)
+            .bind(to: viewModel.selectPhoto)
+            .disposed(by: disposeBag)
+        
     }
     
 }

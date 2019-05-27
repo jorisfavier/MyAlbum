@@ -15,7 +15,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var photoImage: UIImageView!
     
     func setup(photo: Photo){
-        let url = URL(string: photo.url)
+        let url = URL(string: photo.thumbnailUrl)
         let processor = CroppingImageProcessor(size: self.frame.size,
                                                        anchor: CGPoint(x: 0.5, y: 0.5))
         photoImage.kf.setImage(with: url,
