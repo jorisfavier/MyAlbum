@@ -19,23 +19,36 @@ class AlbumViewModel {
     private var _error = PublishSubject<String>()
     private var _selectedAlbum = PublishSubject<Album>()
     
-    var albums: Observable<[Album]> {
-        return _albumsList.asObservable()
+    // MARK: Inputs
+    
+    /// Call to open an album
+    var selectAlbum: AnyObserver<Album> {
+        return _selectedAlbum.asObserver()
     }
+    
+    /// Call to reload the album list
     var reload: AnyObserver<Void> {
         return _reload.asObserver()
     }
+    
+    // MARK: Outputs
+    
+    /// Emits an array of fetched albums
+    var albums: Observable<[Album]> {
+        return _albumsList.asObservable()
+    }
+    
+    /// Emits an error message to be displayed
     var error: Observable<String> {
         return _error.asObservable()
     }
     
+    /// Emits an album to be opened
     var showAlbumDetail: Observable<Album> {
         return _selectedAlbum.asObservable()
     }
     
-    var selectAlbum: AnyObserver<Album> {
-        return _selectedAlbum.asObserver()
-    }
+    
     
     init(albumService: AlbumService) {
         self.albumService = albumService

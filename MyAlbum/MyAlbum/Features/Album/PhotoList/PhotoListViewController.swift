@@ -78,8 +78,8 @@ extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = collectionView.bounds.width
-        //We want 3 column but with a margin of 10 between each cell
-        let cellWidth = (width - 30) / 3
+        //We want 2 column but with a margin of 10 between each cell
+        let cellWidth = (width - 20) / 2
         return CGSize(width: cellWidth, height: cellWidth)
     }
 }

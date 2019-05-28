@@ -136,13 +136,13 @@
 		A980B03F22998365006C862A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9BE8E2D229CB14200EC6B6B /* Extension */,
+				A980B04522998435006C862A /* Protocol */,
+				A980B04422998430006C862A /* DTO */,
 				A980B04E2299853F006C862A /* Album.swift */,
 				A980B04F2299853F006C862A /* BaseCoordinator.swift */,
 				A980B0502299853F006C862A /* Photo.swift */,
-				A980B04522998435006C862A /* Protocol */,
-				A980B04422998430006C862A /* DTO */,
 				A980B05822999C40006C862A /* Error.swift */,
-				A980B06F229C7EA2006C862A /* UIViewControler+MyAlbum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,8 +221,8 @@
 		A980B071229C828B006C862A /* Album */ = {
 			isa = PBXGroup;
 			children = (
-				A980B074229C8DB6006C862A /* PhotoDetail */,
 				A980B05A2299BFB0006C862A /* AlbumCoordinator.swift */,
+				A980B074229C8DB6006C862A /* PhotoDetail */,
 				A980B05422998583006C862A /* AlbumList */,
 				A980B065229C72E5006C862A /* PhotoList */,
 			);
@@ -236,6 +236,14 @@
 				A980B077229C9215006C862A /* PhotoDetailViewModel.swift */,
 			);
 			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		A9BE8E2D229CB14200EC6B6B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A980B06F229C7EA2006C862A /* UIViewControler+MyAlbum.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A9C52B7922984B1900375EB0 = {

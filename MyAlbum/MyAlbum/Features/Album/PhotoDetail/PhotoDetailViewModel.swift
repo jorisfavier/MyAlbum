@@ -15,10 +15,16 @@ class PhotoDetailViewModel {
     
     private let _dissmiss = PublishSubject<Void>()
     
+    // MARK: Inputs
+    
+    /// Call to dismiss the current view
     var callDismiss: AnyObserver<Void> {
         return _dissmiss.asObserver()
     }
     
+    //MARK: Outputs
+    
+    /// Emits to indicate to close the current view
     var dismiss: Observable<Void> {
         return _dissmiss.asObservable()
     }
